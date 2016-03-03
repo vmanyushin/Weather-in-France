@@ -1,0 +1,23 @@
+.mod-weather { width: 480px; height: 350px; margin: 0px; }
+h1.mod-weather__location { font-size: 24px; }
+.mod-weather__day { margin-top: 30px; float: left}
+
+.mod-weather__days table { width: 60%; margin: 20px 0px 10px 15px; }
+.mod-weather__days table td {
+    text-shadow: 1px 1px 1px #555;
+    font-size: 20px;
+    color: #fff;
+    padding: 0 7px;
+    font-weight:bold;
+}
+
+.mod-weather__saint.night { color: #fff; }
+.mod-weather__days .weekend { color: silver; }
+
+.mod-weather__days table tr:nth-child(1) > td { font-size: 14px; color: #fff; padding-bottom: 10px; }
+.mod-weather__days table tr:nth-child(3) > td { font-size: 14px; }
+.mod-weather__days td.active { color: #1bb0cf }
+
+.mod-weather_settings { position: absolute; right: 10px; bottom: 0px;}
+
+.hide { visibility: hidden; }

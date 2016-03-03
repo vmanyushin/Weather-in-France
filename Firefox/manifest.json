@@ -1,0 +1,85 @@
+{
+
+  "description": "Show weather and forecast in France",
+  "manifest_version": 2,
+  "name": "Weater in France",
+  "version": "0.0.1",
+  "homepage_url": "",
+  "icons": {
+    "128": "icons/128.png"
+  },
+
+  "applications": {
+    "gecko": {
+      "id": "weatherinfrance@gmail.com",
+      "strict_min_version": "45.0.0"
+    }
+  },
+
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],  
+
+  "browser_action": {
+    "default_icon": "icons/128.png",
+    "default_title": "Weather in France",
+    "default_popup": "popup.html"
+  },
+  
+  "web_accessible_resources": [
+    "img/background-broken_clouds--day.jpg",
+    "img/background-broken_clouds--night.jpg",
+    "img/background-clear_sky--day.jpg",
+    "img/background-clear_sky--night.jpg",
+    "img/background-few_clouds--day.jpg",
+    "img/background-freezing_rain--day.jpg",
+    "img/background-freezing_rain--night.jpg",
+    "img/background-mist--day.jpg",
+    "img/background-mist--night.jpg",
+    "img/background-rain--day.jpg",
+    "img/background-rain--night.jpg",
+    "img/background-scattered_clouds--day.jpg",
+    "img/background-scattered_clouds--night.jpg",
+    "img/background-shower_rain--day.jpg",
+    "img/background-shower_rain--night.jpg",
+    "img/background-thunderstorm--day.jpg",
+    "img/background-thunderstorm--night.jpg",
+    "img/background-thunderstorm_rain--day.jpg",
+    "img/background-thunderstorm_rain--night.jpg",
+    "img/date--background.png",
+    "img/options.png",
+    "img/picto-broken_clouds--day.png",
+    "img/picto-clear_sky--day.png",
+    "img/picto-data--humidity.png",
+    "img/picto-data--temperature.png",
+    "img/picto-data--wind-direction.png",
+    "img/picto-data--wind-speed.png",
+    "img/picto-few_clouds--day.png",
+    "img/picto-freezing_rain--day.png",
+    "img/picto-mist--day.png",
+    "img/picto-rain--day.png",
+    "img/picto-scattered_clouds--day.png",
+    "img/picto-shower_rain--day.png",
+    "img/picto-thunderstorm--day.png",
+    "img/picto-thunderstorm_rain--day.png",
+    "fonts/muli/muli-regular-webfont-.eot",
+    "fonts/muli/muli-regular-webfont.eot",
+    "fonts/muli/muli-regular-webfont.svg",
+    "fonts/muli/muli-regular-webfont.ttf",
+    "fonts/muli/muli-regular-webfont.woff",
+    "fonts/muli/muli-regular-webfont.woff2",
+    "css/jquery-ui.min.css",
+    "css/main.css",
+    "css/styles.css",
+    "js/functions.js",
+    "js/handlebars.min.js",
+    "js/jquery-1.11.2.min.js",
+    "js/jquery-ui.min.js",
+    "js/moment-with-locales.min.js",
+    "js/options.js",
+    "js/typeahead.bundle.js",
+    "js/weather.js"
+  ]
+
+}

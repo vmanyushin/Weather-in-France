@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather</title>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+<body>
+
+<div class="mod-weather">
+    <div class="" id="background">
+        <div class="mod-weather__picto">
+            <img src="img/picto-clear_sky--day.png" alt="" id="picto">
+        </div>
+        <div class="mod-weather__infos">
+            <div class="mod-weather__date" id="date"></div>
+            <div class="mod-weather__saint" id="nestor">Saint Nestor</div>
+            <div class="mod-weather__datas">
+                <div class="mod-weather__data mod-weather__data_temp hide">
+                    <img src="img/picto-data--temperature.png" alt=""> <span id="temp"></span>
+                </div>
+
+                <div class="mod-weather__data mod-weather__data_humidity hide">
+                    <img src="img/picto-data--humidity.png" alt=""> <span id="humidity"></span>
+                </div>
+
+                <div class="mod-weather__data  mod-weather__data_wind hide">
+                    <img src="img/picto-data--wind-speed.png" alt=""> <span id="wind"></span>
+                </div>
+
+                <div class="mod-weather__data  mod-weather__data_direction hide">
+                    <img src="img/picto-data--wind-direction.png" alt="">
+                    <span id="direction"></span>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="mod-weather__days" id="days">
+
+            <table>
+                <tr>
+                    <td colspan="6" class="hide">Prevision à 7 jours</td>
+                </tr>
+
+                <tr>
+                    <td id="day1" class="active"></td>
+                    <td id="day2"></td>
+                    <td id="day3"></td>
+                    <td id="day4"></td>
+                    <td id="day5"></td>
+                    <td id="day6"></td>
+                    <td id="day7"></td>
+                </tr>
+
+                <tr class="forecast hide">
+                    <td id="forecastDay1"></td>
+                    <td id="forecastDay2"></td>
+                    <td id="forecastDay3"></td>
+                    <td id="forecastDay4"></td>
+                    <td id="forecastDay5"></td>
+                    <td id="forecastDay6"></td>
+                    <td id="forecastDay7"></td>
+                </tr>
+            </table>
+
+            </ul>
+        </div>
+        <h1 class="mod-weather__location" id="location"></h1>
+        <div class="mod-weather__udpate">Mise à jour : <span id="timestamp"></span></div>
+    </div>
+
+    <div class="mod-weather_settings">
+        <a href="/options.html" target="_blank"><img src="img/options.png" alt=""></a>
+    </div>
+</div>
+
+<div id="debug"></div>
+
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/moment-with-locales.min.js"></script>
+<script src="js/weather.js"></script>
+</body>
+</html>
