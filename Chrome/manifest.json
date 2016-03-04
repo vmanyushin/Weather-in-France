@@ -19,6 +19,7 @@
     "unlimitedStorage",
     "notifications",
     "geolocation",
-    "storage"
+    "storage",
+    "alarms"
   ]
 }

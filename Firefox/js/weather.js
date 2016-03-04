@@ -6,7 +6,7 @@ function updateWeatherError(error) {
     console.log(error);
 }
 
-function updateSettings() {
+function update() {
     chrome.storage.local.get({
         city: 'Paris',
         temp: true,
@@ -91,6 +91,22 @@ function showWeatherLocation(data) {
     $('#picto').prop('src', 'img/' + context.picto);
     $('#background').prop('class', '').prop('class', 'mod-weather__main ' + context.background);
 
+    // uncomment on FF 45
+    //var color = {};
+    //
+    //if(context.temp <= 0) {
+    //    color = { color: [122,153,250,255] };
+    //} else if (context.temp > 0 && context.temp < 10) {
+    //    color = {color: [0, 192, 255, 255]};
+    //} else if (context.temp > 10 && context.temp < 25) {
+    //    color = {color: [82, 194, 0, 255]};
+    //} else if (context.temp > 25) {
+    //    color = {color: [255, 0, 0, 255]};
+    //}
+    //
+    //browser.browserAction.setBadgeText({text: "" + context.temp});
+    //browser.browserAction.setBadgeBackgroundColor(color);
+
     if (context.nightOrDay == 'night') $('#nestor').addClass('night');
     day = moment().day();
 
@@ -131,4 +147,9 @@ function ucfirst(string) {
 $('#timestamp').text(moment().format('DD/MM/YYYY - HH:mm'));
 $('#date').text(moment().format('DD MMMM YYYY'));
 
-updateSettings();
+update();
+
+// uncomment on FF 45
+//window.setInterval(function(){
+//    update();
+//}, 3600000);

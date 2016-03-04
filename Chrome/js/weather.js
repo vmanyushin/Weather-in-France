@@ -6,7 +6,7 @@ function updateWeatherError(error) {
     console.log(error);
 }
 
-function updateSettings() {
+function update() {
     chrome.storage.sync.get({
         city: 'Paris',
         temp: true,
@@ -91,6 +91,21 @@ function showWeatherLocation(data) {
     $('#picto').prop('src', 'img/' + context.picto);
     $('#background').prop('class', '').prop('class', 'mod-weather__main ' + context.background);
 
+    var color = {};
+
+    if(context.temp <= 0) {
+        color = { color: [122,153,250,255] };
+    } else if (context.temp > 0 && context.temp < 10) {
+        color = {color: [0, 192, 255, 255]};
+    } else if (context.temp > 10 && context.temp < 25) {
+        color = {color: [82, 194, 0, 255]};
+    } else if (context.temp > 25) {
+        color = {color: [255, 0, 0, 255]};
+    }
+
+    chrome.browserAction.setBadgeText({text: "" + context.temp});
+    chrome.browserAction.setBadgeBackgroundColor(color);
+
     if (context.nightOrDay == 'night') $('#nestor').addClass('night');
     day = moment().day();
 
@@ -131,4 +146,9 @@ function ucfirst(string) {
 $('#timestamp').text(moment().format('DD/MM/YYYY - HH:mm'));
 $('#date').text(moment().format('DD MMMM YYYY'));
 
-updateSettings();
+update();
+
+chrome.alarms.create('updateWeather', {periodInMinutes: 1});
+chrome.alarms.onAlarm.addListener(function(alarm) {
+    update();
+});
