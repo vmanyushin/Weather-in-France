@@ -101,7 +101,7 @@ function showWeatherLocation(data) {
 
     $('.forecast, .mod-weather__days td.hide').removeClass('hide');
 
-    j = day = moment().day();
+    j = day = moment().day() - 1;
 
     for (var i = 1; i < 8; i++) {
         if (j == 7) j = 0;
