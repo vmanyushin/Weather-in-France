@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Reglages</title>
+    <script src="js/cities.js"></script>
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/bulma.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+
+<div class="section">
+    <div class="container">
+        <h1>Reglages:</h1>
+
+        <div class="columns">
+            <div class="column is-6">
+                <p class="control">
+                    <label for="city" class="label">Sélectionnez votre ville:</label>
+                    <input type="text" name="city" id="city" class="input">
+                </p>
+            </div>
+        </div>
+
+        <h2>Afficher:</h2>
+
+        <div class="columns">
+            <div class="column is-6">
+                <p class="control">
+                    <label for="temp" class="checkbox">La température
+                        <input type="checkbox" name="temp" id="temp" class="checkbox">
+                    </label>
+                </p>
+            </div>
+        </div>
+
+        <div class="columns">
+            <div class="column is-6">
+                <p class="control">
+                    <label for="humidity" class="checkbox">L’humidité
+                        <input type="checkbox" name="humidity" id="humidity" class="checkbox">
+                    </label>
+                </p>
+            </div>
+        </div>
+
+        <div class="columns">
+            <div class="column is-6">
+                <p class="control">
+                    <label for="wind" class="checkbox">Le vent
+                        <input type="checkbox" name="wind" id="wind" class="checkbox">
+                    </label>
+                </p>
+            </div>
+        </div>
+
+        <div class="columns">
+            <div class="column is-6">
+                <p class="control">
+                    <label for="direction" class="checkbox">La direction du vent
+                        <input type="checkbox" name="direction" id="direction" class="checkbox">
+                    </label>
+                </p>
+            </div>
+        </div>
+
+        <div class="columns">
+            <div class="column is-6">
+                <p class="control">
+                    <label for="forecast" class="checkbox">Les prévisions à 7 jours
+                        <input type="checkbox" name="forecast" id="forecast" class="checkbox">
+                    </label>
+                </p>
+            </div>
+        </div>
+
+        <div class="columns">
+            <div class="column">
+                <p class="control">
+                    <button class="button is-primary" id="save">Enregistrer</button>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+<script src="js/functions.js"></script>
+<script src="js/options.js"></script>
+</html>
