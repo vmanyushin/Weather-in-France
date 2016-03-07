@@ -112,6 +112,8 @@ function showWeatherLocation(data) {
         $('#forecastDay' + i).text(Math.round(data.list[i].main.temp) + ' °');
         j++;
     }
+
+    setButtonIcon(icons[data.list[0].weather[0].icon].b);
 }
 
 function degToCompass(num) {
@@ -173,17 +175,21 @@ function restoreSettings(event) {
 }
 
 function setButtonIcon(icon) {
+    icon = icon.replace(/night/, 'day');
+    console.log('setButtonIcon / ' + icon);
     var itemArray = safari.extension.toolbarItems;
 
     for (var i = 0; i < itemArray.length; ++i) {
         var item = itemArray[i];
-        if(item.dentifier == 'weather') {
+
+        if(item.identifier == 'weather') {
+            console.log('change button icon to: ' + safari.extension.baseURI + '128-' + icon + '.png');
             item.image = safari.extension.baseURI + '128-' + icon + '.png';
         }
     }
 }
 
-
+// 1h update 
 window.setInterval(function() {
     update();
-}, 360000)
+}, 360000);

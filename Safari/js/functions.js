@@ -13,6 +13,7 @@ function save_options() {
     };
 
     safari.self.tab.dispatchMessage("saveSettings", data);
+    window.close();
 }
 
 function restore_options() {
